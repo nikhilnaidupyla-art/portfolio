@@ -26,15 +26,68 @@
                     <img src="image/portfolio.jpg" alt="My Portfolio">
                     <h3>My Portfolio</h3>
                     <p>Designed and developed this responsive portfolio using HTML, CSS, and JavaScript.</p>
-                    <button class="project-btn">View Details</button>
+                    <button class="view-btn" data-project="portfolio">View Details</button>
                 </div>
                 
                 <div class="project-card">
                     <img src="Image/pickleball.jpg" alt="Pickleball Management System">
                     <h3>Pickleball Management System</h3>
                     <p>A FastAPI-based web app to manage players, teams, and matches with PostgreSQL integration.</p>
-                    <button class="project-btn">View Details</button>
+                    <button class="view-btn" data-project="pickleball">View Details</button>
                 </div>
+                <!-- Modal (Hidden by default) -->
+                <div id="projectModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                            <h2 id="modalTitle">Project Title</h2>
+                            <p id="modalDescription">Project description goes here...</p>
+                    </div> 
+                 </div>
+             </div>
         </section>
+        <script>
+  // Modal elements
+  const modal = document.getElementById("projectModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalImage = document.getElementById("modalImage");
+  const modalDescription = document.getElementById("modalDescription");
+  const closeBtn = document.querySelector(".close");
+
+  // Your project details
+  const projectData = {
+    portfolio: {
+      title: "My Portfolio",
+      description:
+        "A personal portfolio website built with HTML, CSS, and JavaScript to showcase my projects and professional skills. Includes responsive layout and smooth navigation."
+    },
+    pickleball: {
+      title: "Pickleball Management System",
+      description:
+        "A FastAPI-based web application that manages players, teams, and match data. It uses PostgreSQL for backend storage and integrates a user-friendly dashboard for managing tournament stats."
+    }
+  };
+
+  // Add click event to buttons
+  document.querySelectorAll(".view-btn").forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const projectKey = e.target.getAttribute("data-project");
+      const project = projectData[projectKey];
+
+      // Fill modal data
+      modalTitle.textContent = project.title;
+      modalDescription.textContent = project.description;
+
+      // Show modal
+      modal.style.display = "flex";
+    });
+  });
+
+  // Close modal
+  closeBtn.onclick = () => (modal.style.display = "none");
+  window.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  };
+</script>
+
     </body>
 </html>
