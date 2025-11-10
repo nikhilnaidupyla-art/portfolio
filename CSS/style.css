@@ -1,9 +1,17 @@
 /*------------- General Style --------------------*/
+* {
+  box-sizing: border-box;
+}
+
 body{
     margin: 0;
     font-family: 'Poppins',sans-serif;
     background-color: black;
     color: white;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 header{
@@ -12,18 +20,46 @@ header{
     align-items: center;
     padding: 20px 60px;
     background-color: black;
+    flex-wrap: wrap;
+    min-height: 90px;
 }
+
+/* Ensure header stays horizontal on desktop */
+@media (min-width: 769px) {
+    header {
+        flex-direction: row !important;
+        flex-wrap: nowrap;
+    }
+    
+    .logo {
+        flex-shrink: 0;
+    }
+    
+    nav {
+        flex-grow: 0;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .contact-btn {
+        flex-shrink: 0;
+    }
+}
+
 /*------------ Logo ----------------------------*/
 .logo img{
    width: 50px;
    height: 50px;
-   border-radius: 50;
+   border-radius: 50%;
    object-fit: cover;
 }
+
 .logo{
     display: flex;
-    align-items: lefts;
+    align-items: center;
+    flex-shrink: 0;
 }
+
 /*------------- Navigation ----------------------*/
 nav a{
     color: white;
@@ -31,25 +67,13 @@ nav a{
     margin: 0 20px;
     font-weight: 500;
 }
+
 nav a:hover,
 nav a.active{
     color: yellow;
 }
-/*--------------- Contact Button Style -----------------*/
-/*.conntact-btn{
-    border: 1px solid white;
-    background: transparent;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
 
-.contact-btn:hover {
-    background-color: yellow;
-    color: black;
-}*/
+/*--------------- Contact Button Style -----------------*/
 .contact-btn {
     padding: 12px 30px;
     background: linear-gradient(135deg, #ffda00, #ff9f00);
@@ -68,17 +92,6 @@ nav a.active{
     box-shadow: 0 6px 20px rgba(255, 218, 0, 0.5);
 }
 
-/* ===== GLOBAL FONT & BASE STYLE (For all pages) ===== */
-body {
-  font-family: 'Poppins', sans-serif;  /* ✅ Consistent font */
-  font-size: 16px;                     /* ✅ Consistent size */
-  line-height: 1.6;
-  color: #f2f2f2;
-  background-color: #0d0d0d;
-  margin: 0;
-  padding: 0;
-}
-
 /* Heading consistency for all pages */
 h1, h2, h3, h4 {
   font-family: 'Poppins', sans-serif;
@@ -93,104 +106,18 @@ p {
   margin-bottom: 15px;
 }
 
-/* ===== About Section Layout ===== */
-.about {
-  padding: 100px 100px;
-  background-color: #111;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 60px;
-  color: #ffda00;
-}
-
-/* Main container */
-.about-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 60px;
-  flex-wrap: wrap;
-}
-
-/* Left side: image */
-.about-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-image img {
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid #ffda00;
-  box-shadow: 0 0 30px rgba(255, 218, 0, 0.2);
-  transition: transform 0.4s ease;
-}
-
-.about-image img:hover {
-  transform: scale(1.05);
-}
-
-/* Right side: info */
-.about-info {
-  flex: 1.2;
-  max-width: 600px;
-}
-
-.about-info .highlight {
-  color: #ffda00;
-  font-weight: 600;
-}
-
-.about-buttons {
-  margin-top: 25px;
-  display: flex;
-  gap: 15px;
-}
-
-/* Button styles */
-.about-btn {
-  background-color: #ffda00;
-  color: #000;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 25px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-}
-
-.about-btn:hover {
-  background-color: #e6c900;
-  box-shadow: 0 0 12px rgba(255, 218, 0, 0.6);
-  transform: translateY(-2px);
-}
-
-.about-btn.outline {
-  background: transparent;
-  border: 2px solid #ffda00;
-  color: #ffda00;
-}
-
-.about-btn.outline:hover {
-  background-color: #ffda00;
-  color: #000;
-}
-
-
-/*---------------- Hero Section(Home Page)------------------*/
+/*---------------- Hero Section (Home Page) ------------------*/
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 100px;
+    flex-direction: row-reverse; /* Image on RIGHT, text on LEFT */
 }
 
 .hero-text {
@@ -209,11 +136,12 @@ p {
 .hero-img img {
     width: 320px;
     border-radius: 15px;
+    margin-bottom: 30px; /* Space between image and buttons */
 }
 
 /* ===== Hero Buttons ===== */
 .hero-buttons {
-    margin-top: 25px;
+    margin-top: 30px;
     display: flex;
     gap: 15px;
     flex-wrap: nowrap;
@@ -249,6 +177,93 @@ p {
     color: #000;
 }
 
+/* ===== About Section Layout ===== */
+.about {
+  padding: 100px 100px;
+  background-color: black;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 60px;
+  color: #ffda00;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ffda00;
+  box-shadow: 0 0 30px rgba(255, 218, 0, 0.2);
+  transition: transform 0.4s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+.about-info {
+  flex: 1.2;
+  max-width: 600px;
+}
+
+.about-info .highlight {
+  color: #ffda00;
+  font-weight: 600;
+}
+
+.about-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.about-btn {
+  background-color: #ffda00;
+  color: #000;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.about-btn:hover {
+  background-color: #e6c900;
+  box-shadow: 0 0 12px rgba(255, 218, 0, 0.6);
+  transform: translateY(-2px);
+}
+
+.about-btn.outline {
+  background: transparent;
+  border: 2px solid #ffda00;
+  color: #ffda00;
+}
+
+.about-btn.outline:hover {
+  background-color: #ffda00;
+  color: #000;
+}
+
 /*---------- Common Page Layout-----------*/
 section {
     padding: 80px 100px;
@@ -258,23 +273,7 @@ h2 {
     color: #ffda00;
     margin-bottom: 20px;
 }
-/*---------- Project Card -----------------*/
-.project-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;     /* Keeps image proportional and crops extra*/
-    border-radius: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #333;
-}
-/*.project-card img {
-    transition: transform 0.3s ease;
-}
 
-.project-card:hover img {
-    transform: scale(1.05);
-}
-*/
 /* ===== Projects Section ===== */
 .projects-container {
     display: flex;
@@ -294,33 +293,18 @@ h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ===== View Details Button Styling ===== */
-.view-btn {
-    background-color: #ffda00;
-    color: #000;
-    border: none;
-    padding: 10px 22px;
-    border-radius: 25px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 10px;
-    display: inline-block;
-    text-decoration: none; /* Removes underline if it’s an <a> tag */
-    font-family: inherit;  /* Ensures same font as site */
-    white-space: nowrap;   /* Prevents text wrapping */
-}
-
-.view-btn:hover {
-    background-color: #e6c900;
-    box-shadow: 0 0 12px rgba(255, 218, 0, 0.6);
-    transform: translateY(-2px);
-}
-
-
 .project-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 20px rgba(255, 218, 0, 0.3);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
 }
 
 .project-card h3 {
@@ -333,6 +317,28 @@ h2 {
     color: white;
     font-size: 0.95rem;
     line-height: 1.4;
+}
+
+.view-btn {
+    background-color: #ffda00;
+    color: #000;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: inherit;
+    white-space: nowrap;
+}
+
+.view-btn:hover {
+    background-color: #e6c900;
+    box-shadow: 0 0 12px rgba(255, 218, 0, 0.6);
+    transform: translateY(-2px);
 }
 
 .project-btn {
@@ -379,10 +385,11 @@ button[type="submit"]:hover {
     background-color: #e6c900;
 }
 
+/*----- Footer ---------------*/
 footer {
     background-color: #000;
     color: white;
-    text-align: right;
+    text-align: center;
     padding: 20px 15px;
     font-size: 0.9rem;
     margin-top: 50px;
@@ -396,199 +403,6 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-
-/* ===== Responsive Design ===== */
-
-/* 📱 For Tablets and Smaller Screens 
-@media (max-width: 768px) {
-
-    header {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .hero {
-        flex-direction: column;
-        padding: 40px 20px;
-        text-align: center;
-    }
-
-    .hero-text {
-        max-width: 100%;
-    }
-
-    .hero-img img {
-        width: 250px;
-        margin-top: 30px;
-    }
-
-    .projects-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project-card {
-        width: 90%;
-        max-width: 400px;
-    }
-
-    section {
-        padding: 60px 20px;
-    }
-}
-
-/* 📱 For Mobile Phones (smaller than 480px) 
-@media (max-width: 480px) {
-
-    header {
-        padding: 15px;
-    }
-
-    nav a {
-        display: block;
-        margin: 8px 0;
-    }
-
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .contact-btn,
-    .hire-btn,
-    .project-btn {
-        width: 100%;
-        font-size: 1rem;
-        padding: 10px;
-    }
-
-    footer {
-        font-size: 0.8rem;
-        padding: 15px;
-    }
-}*/
-
-
-/* ===== Responsive Scaling (No Rearranging) ===== */
-
-/* Tablet and smaller screens */
-@media (max-width: 1024px) {
-    body {
-        font-size: 90%;
-    }
-
-    .hero {
-        padding: 60px 50px;
-    }
-
-    .hero-img img {
-        width: 260px;
-    }
-
-    .project-card {
-        width: 230px;
-        padding: 20px;
-    }
-
-    .project-card h3 {
-        font-size: 1rem;
-    }
-
-    .project-card p {
-        font-size: 0.9rem;
-    }
-}
-
-/* Mobile and smaller screens */
-@media (max-width: 768px) {
-    body {
-        font-size: 80%;
-    }
-
-    header {
-        padding: 15px 30px;
-    }
-
-    nav a {
-        font-size: 0.9rem;
-        margin: 0 10px;
-    }
-
-    .hero {
-        padding: 40px 30px;
-    }
-
-    .hero-text h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-text p {
-        font-size: 1rem;
-    }
-
-    .hero-img img {
-        width: 220px;
-    }
-
-    .project-card {
-        width: 200px;
-    }
-
-    .project-btn {
-        font-size: 0.85rem;
-        padding: 8px 14px;
-    }
-}
-/* ===== Responsive Fix for Buttons on Small Screens ===== */
-@media (max-width: 600px) {
-  .hero-btn {
-      padding: 10px 20px;     /* Smaller padding */
-      font-size: 0.9rem;      /* Slightly smaller text */
-  }
-
-  .hero-buttons {
-      gap: 10px;              /* Reduces space between buttons */
-      flex-wrap: nowrap;      /* Keeps them on one line */
-  }
-}
-/* Very small screens */
-@media (max-width: 480px) {
-    body {
-        font-size: 70%;
-    }
-
-    header {
-        padding: 10px 20px;
-    }
-
-    .hero {
-        padding: 30px 20px;
-    }
-
-    .hero-img img {
-        width: 180px;
-    }
-
-    .project-card {
-        width: 180px;
-        padding: 15px;
-    }
-
-    footer {
-        font-size: 0.8rem;
-        padding: 10px 0;
-    }
 }
 
 /* ===== Modal ===== */
@@ -638,25 +452,214 @@ footer a:hover {
   to { opacity: 1; transform: scale(1); }
 }
 
+/* ===== RESPONSIVE DESIGN ===== */
 
+/* Tablet and smaller screens */
+@media (max-width: 1024px) {
+    body {
+        font-size: 90%;
+    }
 
-/* ===== Responsive About Section ===== */
-@media (max-width: 900px) {
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
+    .hero {
+        padding: 60px 50px;
+    }
 
-  .about-image img {
-    width: 250px;
-    height: 250px;
-  }
+    .hero-img img {
+        width: 260px;
+    }
 
-  .about-info {
-    max-width: 100%;
-  }
+    .project-card {
+        width: 230px;
+        padding: 20px;
+    }
 
-  .about-buttons {
-    justify-content: center;
-  }
+    .project-card h3 {
+        font-size: 1rem;
+    }
+
+    .project-card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile and smaller screens */
+@media (max-width: 768px) {
+    body {
+        font-size: 80%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+        margin: 5px 8px;
+    }
+
+    .contact-btn {
+        margin-top: 10px;
+        font-size: 0.85rem;
+        padding: 10px 25px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        order: 2;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-img {
+        order: 1;
+        margin-bottom: 20px;
+    }
+
+    .hero-img img {
+        width: 220px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .hero-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    .about {
+        padding: 50px 20px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .about-info {
+        max-width: 100%;
+    }
+
+    .about-buttons {
+        justify-content: center;
+    }
+
+    .projects-container {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .project-btn {
+        font-size: 0.85rem;
+        padding: 8px 14px;
+    }
+
+    form {
+        width: 100%;
+        max-width: 350px;
+        padding: 0 15px;
+    }
+
+    input, textarea {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 15px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+    body {
+        font-size: 70%;
+    }
+
+    header {
+        padding: 10px 15px;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        margin: 3px 5px;
+    }
+
+    .contact-btn {
+        padding: 8px 18px;
+        font-size: 0.8rem;
+    }
+
+    .hero {
+        padding: 30px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-img img {
+        width: 180px;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 280px;
+        padding: 15px;
+    }
+
+    .about-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 10px 0;
+    }
 }
