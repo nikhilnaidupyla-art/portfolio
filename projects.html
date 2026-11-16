@@ -12,7 +12,7 @@
             <nav>
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
-                <a href="projects.html" class="active">Projeccts</a>
+                <a href="projects.html" class="active">Projects</a>
                 <a href="contact.html">Contact</a>
             </nav>
 
@@ -34,6 +34,13 @@
                     <h3>Pickleball Management System</h3>
                     <p>A FastAPI-based web app to manage players, teams, and matches with PostgreSQL integration.</p>
                     <button class="view-btn" data-project="pickleball">View Details</button>
+                </div>
+
+                <div class="project-card">
+                    <img src="Image/vizag_bus.jpg" alt="VizagBus AI — Smart Transit System">
+                    <h3>VizagBus AI</h3>
+                    <p>AI-driven smart transit platform for APSRTC featuring real-time bus tracking, crowd simulation, and intelligent route navigation.</p>
+                    <button class="view-btn" data-project="vizagbus">View Details</button>
                 </div>
                 <!-- Modal (Hidden by default) -->
                 <div id="projectModal" class="modal">
@@ -64,6 +71,11 @@
       title: "Pickleball Management System",
       description:
         "A FastAPI-based web application that manages players, teams, and match data. It uses PostgreSQL for backend storage and integrates a user-friendly dashboard for managing tournament stats."
+    },
+    vizagbus: {
+      title: "VizagBus AI — APSRTC Smart Transit System",
+      description:
+        "An intelligent public transit navigation and fleet telemetry platform designed for Visakhapatnam commuters and APSRTC operations. Built with a high-performance FastAPI backend and SQLite database, the system features real-time GPS tracking across 70 geolocated stops and 30 master transit lines, dynamic crowd density simulation, grievance ticketing with automated NLP categorization, and an interactive AI Transit Assistant powered by Google Gemini/Groq Gemma with RAG (Retrieval-Augmented Generation) telemetry support."
     }
   };
 
