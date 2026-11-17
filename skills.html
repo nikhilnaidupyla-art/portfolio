@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills & Expertise | My Portfolio</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="Image/logo.jpeg" alt="My logo"></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html" class="active">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="contact-btn" onclick="location.href='contact.html'">Contact me</button>
+    </header>
+
+    <section class="skills-section">
+        <div class="skills-header-container">
+            <h2>Technical Skills & Expertise</h2>
+            <p class="skills-subtitle">
+                Hover over any language or skill card to see an interactive breakdown of exactly which projects it powered, where in the codebase it was utilized, and what problems it solved.
+            </p>
+        </div>
+
+        <!-- Controls: Search & Category Filter Tabs -->
+        <div class="skills-controls-container">
+            <div class="skills-search-box">
+                <span class="skills-search-icon">🔍</span>
+                <input type="text" id="skillSearchInput" class="skills-search-input" placeholder="Search skills (e.g., Python, Java, FastAPI, Gemini, SQL)...">
+            </div>
+
+            <div class="skills-filter-tabs">
+                <button class="filter-tab-btn active" data-category="all">All Skills</button>
+                <button class="filter-tab-btn" data-category="backend">Backend & APIs</button>
+                <button class="filter-tab-btn" data-category="ai">AI & GenAI</button>
+                <button class="filter-tab-btn" data-category="frontend">Frontend</button>
+                <button class="filter-tab-btn" data-category="database">Databases</button>
+                <button class="filter-tab-btn" data-category="tools">Cloud & DevOps</button>
+            </div>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skillsGrid">
+
+            <!-- 1. Python -->
+            <div class="skill-card" data-category="backend" data-skill="python" data-skill-id="python">
+                <div class="skill-card-top">
+                    <div class="skill-icon-wrapper">🐍</div>
+                    <span class="skill-badge">Backend</span>
+                </div>
+                <h3 class="skill-card-title">Python</h3>
+                <div class="skill-level-row">
+                    <span>Proficiency</span>
+                    <span class="skill-level-pct">92%</span>
+                </div>
+                <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="92%"></div>
+                </div>
+                <p class="skill-card-desc">
+                    Core programming language for scalable backend architectures, asynchronous API services, telemetry parsing, and AI integrations.
+                </p>
+                <div class="skill-tags-micro">
+                    <span class="skill-tag-micro">AsyncIO</span>
+                    <span class="skill-tag-micro">OOP</span>
+                    <span class="skill-tag-micro">Data Structures</span>
+                    <span class="skill-tag-micro">Automation</span>
+                </div>
+                <div class="skill-hover-hint">
+                    <span>💡 Place cursor to see project-by-project breakdown</span>
+                </div>
+            </div>
+
+            <!-- 2. Java -->
+            <div class="skill-card" data-category="backend" data-skill="java oop android" data-skill-id="java">
+                <div class="skill-card-top">
+                    <div class="skill-icon-wrapper">☕</div>
+                    <span class="skill-badge">Core Language</span>
+                </div>
+                <h3 class="skill-card-title">Java</h3>
+                <div class="skill-level-row">
+                    <span>Proficiency</span>
+                    <span class="skill-level-pct">89%</span>
+                </div>
+                <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="89%"></div>
+                </div>
+                <p class="skill-card-desc">
+                    Robust object-oriented programming, typed domain modeling, multithreading, and native mobile Android runtime integration.
+                </p>
+                <div class="skill-tags-micro">
+                    <span class="skill-tag-micro">OOP Principles</span>
+                    <span class="skill-tag-micro">Collections</span>
+                    <span class="skill-tag-micro">Android Runtime</span>
+                    <span class="skill-tag-micro">Design Patterns</span>
+                </div>
+                <div class="skill-hover-hint">
+                    <span>💡 Place cursor to see project-by-project breakdown</span>
+                </div>
+            </div>
+
+            <!-- 3. FastAPI -->
+            <div class="skill-card" data-category="backend" data-skill="fastapi backend api" data-skill-id="fastapi">
+                <div class="skill-card-top">
+                    <div class="skill-icon-wrapper">⚡</div>
+                    <span class="skill-badge">Backend</span>
+                </div>
+                <h3 class="skill-card-title">FastAPI</h3>
+                <div class="skill-level-row">
+                    <span>Proficiency</span>
+                    <span class="skill-level-pct">90%</span>
+                </div>
+                <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="90%"></div>
+                </div>
+                <p class="skill-card-desc">
+                    Building high-performance async RESTful APIs, Pydantic data schemas, dependency injection, CORS handling, and automatic OpenAPI docs.
+                </p>
+                <div class="skill-tags-micro">
+                    <span class="skill-tag-micro">RESTful APIs</span>
+                    <span class="skill-tag-micro">Pydantic v2</span>
+                    <span class="skill-tag-micro">Uvicorn</span>
+                    <span class="skill-tag-micro">Middleware</span>
+                </div>
+                <div class="skill-hover-hint">
+                    <span>💡 Place cursor to see project-by-project breakdown</span>
+                </div>
+            </div>
+
+            <!-- 4. GenAI & RAG -->
+            <div class="skill-card" data-category="ai" data-skill="genai rag gemini groq ai" data-skill-id="genai">
+                <div class="skill-card-top">
+                    <div class="skill-icon-wrapper">🤖</div>
+                    <span class="skill-badge">AI & GenAI</span>
+                </div>
+                <h3 class="skill-card-title">GenAI & RAG Solutions</h3>
+                <div class="skill-level-row">
+                    <span>Proficiency</span>
+                    <span class="skill-level-pct">88%</span>
+                </div>
+                <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="88%"></div>
+                </div>
+                <p class="skill-card-desc">
+                    Engineering conversational AI assistants with Google Gemini and Groq Gemma, grounding outputs with live database telemetry via RAG.
+                </p>
+                <div class="skill-tags-micro">
+                    <span class="skill-tag-micro">Google Gemini</span>
+                    <span class="skill-tag-micro">Groq Gemma</span>
+                    <span class="skill-tag-micro">RAG Pipelines</span>
+                    <span class="skill-tag-micro">Prompt Design</span>
+                </div>
+                <div class="skill-hover-hint">
+                    <span>💡 Place cursor to see project-by-project breakdown</span>
+                </div>
+            </div>
+
+            <!-- 5. HTML5 & CSS3 -->
+            <div class="skill-card" data-category="frontend" data-skill="html css frontend" data-skill-id="htmlcss">
+                <div class="skill-card-top">
+                    <div class="skill-icon-wrapper">🎨</div>
+                    <span class="skill-badge">Frontend</span>
+                </div>
+                <h3 class="skill-card-title">HTML5 & CSS3</h3>
+                <div class="skill-level-row">
+                    <span>Proficiency</span>
+                    <span class="skill-level-pct">95%</span>
+                </div>
+                <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="95%"></div>
+                </div>
+                <p class="skill-card-desc">
+                    Designing responsive, mobile-first layouts using modern Flexbox, CSS Grid, custom keyframe animations, and dark/gold design systems.
+                </p>
+                <div class="skill-tags-micro">
+                    <span class="skill-tag-micro">CSS Grid</span>
+                    <span class="skill-tag-micro">Flexbox</span>
+                    <span class="skill-tag-micro">Animations</span>
+                    <span class="skill-tag-micro">Responsive Design</span>
+                </div>
+                <div class="skill-hover-hint">
+                    <span>💡 Place cursor to see project-by-project breakdown</span>
+                </div>
+            </div>
+
+            <!-- 6. JavaScript (ES6+) -->
+            <div class="skill-card" data-category="frontend" data-skill="javascript js frontend" data-skill-id="javascript">
+                <div class="skill-card-top">
+                    <div class="skill-icon-wrapper">✨</div>
+                    <span class="skill-badge">Frontend</span>
+                </div>
+                <h3 class="skill-card-title">JavaScript (ES6+)</h3>
+                <div class="skill-level-row">
+                    <span>Proficiency</span>
+                    <span class="skill-level-pct">86%</span>
+                </div>
+                <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="86%"></div>
+                </div>
+                <p class="skill-card-desc">
+                    Creating dynamic UI components, event-driven interactions, asynchronous API fetch handling, modal popups, and real-time filtering.
+                </p>
+                <div class="skill-tags-micro">
+                    <span class="skill-tag-micro">DOM API</span>
+                    <span class="skill-tag-micro">Async / Await</span>
+                    <span class="skill-tag-micro">Event Listeners</span>
+                    <span class="skill-tag-micro">Popups & Modals</span>
+                </div>
+                <div class="skill-hover-hint">
+                    <span>💡 Place cursor to see project-by-project breakdown</span>
+                </div>
+            </div>
+
+            <!-- 7. PostgreSQL -->
+            <div class="skill-card" data-category="database" data-skill="postgresql postgres sql database" data-skill-id="postgresql">
+                <div class="skill-card-top">
+                    <div class="skill-icon-wrapper">🐘</div>
+                    <span class="skill-badge">Database</span>
+                </div>
+                <h3 class="skill-card-title">PostgreSQL</h3>
+                <div class="skill-level-row">
+                    <span>Proficiency</span>
+                    <span class="skill-level-pct">85%</span>
+                </div>
+                <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="85%"></div>
+                </div>
+                <p class="skill-card-desc">
+                    Relational database architecture, relational integrity, table normalization, and SQL querying for transactional applications like Pickleball System.
+                </p>
+                <div class="skill-tags-micro">
+                    <span class="skill-tag-micro">Relational Schema</span>
+                    <span class="skill-tag-micro">Foreign Keys</span>
+                    <span class="skill-tag-micro">Query Optimization</span>
+                    <span class="skill-tag-micro">Data Integrity</span>
+                </div>
+                <div class="skill-hover-hint">
+                    <span>💡 Place cursor to see project-by-project breakdown</span>
+                </div>
+            </div>
+
+            <!-- 8. SQLite & In-Process DB -->
+            <div class="skill-card" data-category="database" data-skill="sqlite sql database" data-skill-id="sqlite">
+                <div class="skill-card-top">
+                    <div class="skill-icon-wrapper">💾</div>
+                    <span class="skill-badge">Database</span>
+                </div>
+                <h3 class="skill-card-title">SQLite & In-Process DB</h3>
+                <div class="skill-level-row">
+                    <span>Proficiency</span>
+                    <span class="skill-level-pct">92%</span>
+                </div>
+                <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="92%"></div>
+                </div>
+                <p class="skill-card-desc">
+                    Ultra low-latency file-based and in-process database design. Optimized sub-5ms transit queries and pre-seeded ephemeral deployment state.
+                </p>
+                <div class="skill-tags-micro">
+                    <span class="skill-tag-micro">Sub-5ms Queries</span>
+                    <span class="skill-tag-micro">Pre-seeding</span>
+                    <span class="skill-tag-micro">Multi-Path Resolvers</span>
+                    <span class="skill-tag-micro">Spatial Geo-Data</span>
+                </div>
+                <div class="skill-hover-hint">
+                    <span>💡 Place cursor to see project-by-project breakdown</span>
+                </div>
+            </div>
+
+            <!-- 9. Cloud & Render Deployment -->
+            <div class="skill-card" data-category="tools" data-skill="render cloud aws deployment devops" data-skill-id="render">
+                <div class="skill-card-top">
+                    <div class="skill-icon-wrapper">☁️</div>
+                    <span class="skill-badge">Cloud & DevOps</span>
+                </div>
+                <h3 class="skill-card-title">Render & Cloud Hosting</h3>
+                <div class="skill-level-row">
+                    <span>Proficiency</span>
+                    <span class="skill-level-pct">84%</span>
+                </div>
+                <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="84%"></div>
+                </div>
+                <p class="skill-card-desc">
+                    Deploying production web services and backend APIs on cloud platforms like Render and AWS. Overcoming ephemeral disk constraints with pre-seeded builds.
+                </p>
+                <div class="skill-tags-micro">
+                    <span class="skill-tag-micro">Render</span>
+                    <span class="skill-tag-micro">AWS Intro</span>
+                    <span class="skill-tag-micro">Continuous Deploy</span>
+                    <span class="skill-tag-micro">Ephemeral Strategy</span>
+                </div>
+                <div class="skill-hover-hint">
+                    <span>💡 Place cursor to see project-by-project breakdown</span>
+                </div>
+            </div>
+
+            <!-- 10. Git & Version Control -->
+            <div class="skill-card" data-category="tools" data-skill="git github version control" data-skill-id="git">
+                <div class="skill-card-top">
+                    <div class="skill-icon-wrapper">🐙</div>
+                    <span class="skill-badge">Tools</span>
+                </div>
+                <h3 class="skill-card-title">Git & GitHub</h3>
+                <div class="skill-level-row">
+                    <span>Proficiency</span>
+                    <span class="skill-level-pct">90%</span>
+                </div>
+                <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="90%"></div>
+                </div>
+                <p class="skill-card-desc">
+                    Proficient in Git version control workflows, repository synchronization, branch management, collaborative code sharing, and GitHub automation.
+                </p>
+                <div class="skill-tags-micro">
+                    <span class="skill-tag-micro">Version Control</span>
+                    <span class="skill-tag-micro">Branching</span>
+                    <span class="skill-tag-micro">Collaborator Workflow</span>
+                    <span class="skill-tag-micro">SSH & PAT</span>
+                </div>
+                <div class="skill-hover-hint">
+                    <span>💡 Place cursor to see project-by-project breakdown</span>
+                </div>
+            </div>
+
+            <!-- 11. Automated NLP & Prompt Engineering -->
+            <div class="skill-card" data-category="ai" data-skill="nlp prompt engineering classification ai" data-skill-id="nlp">
+                <div class="skill-card-top">
+                    <div class="skill-icon-wrapper">🧠</div>
+                    <span class="skill-badge">AI & GenAI</span>
+                </div>
+                <h3 class="skill-card-title">NLP & Intelligent Classification</h3>
+                <div class="skill-level-row">
+                    <span>Proficiency</span>
+                    <span class="skill-level-pct">87%</span>
+                </div>
+                <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="87%"></div>
+                </div>
+                <p class="skill-card-desc">
+                    Designing algorithmic NLP ticket classification, passenger grievance prioritization, auto-fine evaluation, and depot telemetry alert generation.
+                </p>
+                <div class="skill-tags-micro">
+                    <span class="skill-tag-micro">Severity Grading</span>
+                    <span class="skill-tag-micro">Auto-Tagging</span>
+                    <span class="skill-tag-micro">Structured Output</span>
+                    <span class="skill-tag-micro">Telemetry Verification</span>
+                </div>
+                <div class="skill-hover-hint">
+                    <span>💡 Place cursor to see project-by-project breakdown</span>
+                </div>
+            </div>
+
+            <!-- 12. Automated Testing & QA (pytest) -->
+            <div class="skill-card" data-category="tools" data-skill="pytest testing qa testclient unit tests" data-skill-id="pytest">
+                <div class="skill-card-top">
+                    <div class="skill-icon-wrapper">🧪</div>
+                    <span class="skill-badge">QA & DevOps</span>
+                </div>
+                <h3 class="skill-card-title">Automated Testing & QA</h3>
+                <div class="skill-level-row">
+                    <span>Proficiency</span>
+                    <span class="skill-level-pct">88%</span>
+                </div>
+                <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="88%"></div>
+                </div>
+                <p class="skill-card-desc">
+                    Comprehensive unit, integration, and offline API contract testing using pytest and FastAPI TestClient to guarantee schema integrity and regression resilience.
+                </p>
+                <div class="skill-tags-micro">
+                    <span class="skill-tag-micro">pytest</span>
+                    <span class="skill-tag-micro">FastAPI TestClient</span>
+                    <span class="skill-tag-micro">Schema Validation</span>
+                    <span class="skill-tag-micro">Regression QA</span>
+                </div>
+                <div class="skill-hover-hint">
+                    <span>💡 Place cursor to see project-by-project breakdown</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Floating Interactive Hover Popover -->
+        <div id="skillPopup" class="skill-popup" role="tooltip">
+            <div class="skill-popup-header">
+                <div class="skill-popup-title-group">
+                    <span class="skill-popup-icon" id="popupIcon">🐍</span>
+                    <div>
+                        <h4 class="skill-popup-title" id="popupTitle">Python</h4>
+                        <span class="skill-popup-badge" id="popupBadge">Backend</span>
+                    </div>
+                </div>
+                <button class="skill-popup-close-btn" id="popupCloseBtn" aria-label="Close popup">&times;</button>
+            </div>
+            <div class="skill-popup-subtitle">📁 Project-by-Project Implementation</div>
+            <div class="skill-popup-projects-list" id="popupProjectsList">
+                <!-- Project cards injected dynamically -->
+            </div>
+        </div>
+
+        <!-- Interactive "Skills in Action" Explorer Section -->
+        <div class="skills-action-section">
+            <h3 class="skills-action-title">⚡ Skills in Action (Project Highlights)</h3>
+            <p class="skills-action-subtitle">
+                Click any project showcase below to explore its end-to-end tech stack and architectural decisions:
+            </p>
+
+            <div class="action-chips-container" id="actionChips">
+                <button class="action-chip active" data-action="vizagbus">VizagBus AI (FastAPI & Gemini RAG)</button>
+                <button class="action-chip" data-action="tubeinsight">TubeInsight (Gemini + FastAPI + Pytest)</button>
+                <button class="action-chip" data-action="pickleball">Pickleball App (FastAPI & PostgreSQL)</button>
+                <button class="action-chip" data-action="portfolio">Portfolio (HTML5, CSS3 & JS)</button>
+                <button class="action-chip" data-action="render">Render Cloud (Ephemeral DB Strategy)</button>
+            </div>
+
+            <div class="action-detail-card" id="actionDetailCard">
+                <div class="action-detail-header">
+                    <h4 class="action-detail-project" id="actionTitle">VizagBus AI — APSRTC Smart Transit System</h4>
+                    <span class="action-detail-tag" id="actionTag">FastAPI + Gemini 2.0 Flash + SQLite</span>
+                </div>
+                <p class="action-detail-body" id="actionDesc">
+                    Engineered an intelligent public transit navigation platform connecting 70 geolocated stops, 30 bus lines, and 57 live simulated transit vehicles across Visakhapatnam.
+                </p>
+                <ul class="action-detail-points" id="actionPoints">
+                    <li><span>✔</span> Real-time GPS bus tracking and dynamic crowd density telemetry calculations.</li>
+                    <li><span>✔</span> RAG-powered transit assistant synthesizing user queries with live route tables via Google Gemini & Groq Gemma.</li>
+                    <li><span>✔</span> Automated grievance categorization and severity prioritization with conductor headcount cross-auditing.</li>
+                </ul>
+                <a href="projects.html" class="action-detail-btn" id="actionBtn">View Full Project Details &rarr;</a>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Email: <a href="mailto:nikhilnaidupyla@gmail.com">nikhilnaidupyla@gmail.com</a></p>
+        <p>Linkedin: <a href="https://www.linkedin.com/in/nikhil-naidu-59b0051a1/" target="_blank">linkedin.com/in/nikhilnaidupyla</a></p>
+        <p>Contact Number: <a href="tel:+917993740335">+91 7993740335</a></p>
+    </footer>
+
+    <script>
+        // Animate progress bars on page load
+        document.addEventListener("DOMContentLoaded", () => {
+            const bars = document.querySelectorAll(".skill-bar-fill");
+            setTimeout(() => {
+                bars.forEach(bar => {
+                    const targetWidth = bar.getAttribute("data-width");
+                    bar.style.width = targetWidth;
+                });
+            }, 150);
+        });
+
+        // Category Filtering
+        const filterBtns = document.querySelectorAll(".filter-tab-btn");
+        const skillCards = document.querySelectorAll(".skill-card");
+        const searchInput = document.getElementById("skillSearchInput");
+
+        function filterSkills() {
+            const activeTab = document.querySelector(".filter-tab-btn.active");
+            const selectedCategory = activeTab ? activeTab.getAttribute("data-category") : "all";
+            const searchQuery = searchInput.value.toLowerCase().trim();
+
+            skillCards.forEach(card => {
+                const cardCategory = card.getAttribute("data-category");
+                const cardSkillText = (card.getAttribute("data-skill") || "") + " " + card.innerText.toLowerCase();
+
+                const matchesCategory = (selectedCategory === "all" || cardCategory === selectedCategory);
+                const matchesSearch = searchQuery === "" || cardSkillText.includes(searchQuery);
+
+                if (matchesCategory && matchesSearch) {
+                    card.style.display = "block";
+                    card.style.animation = "skillFadeIn 0.4s ease forwards";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                filterBtns.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+                filterSkills();
+            });
+        });
+
+        searchInput.addEventListener("input", filterSkills);
+
+        // ==========================================
+        // HOVER POPUP: PROJECT USAGE BREAKDOWN DATA
+        // ==========================================
+        const skillProjectData = {
+            java: {
+                title: "Java",
+                icon: "☕",
+                badge: "Core Language",
+                projects: [
+                    {
+                        name: "Android Mobile Calculator App",
+                        where: "Native Android Platform Bridge (`MainActivity.java`)",
+                        problem: "Engineered native high-precision mathematical calculation logic, bridged Flutter UI state with native Android OS lifecycle, and handled edge-case floating-point arithmetic traps."
+                    },
+                    {
+                        name: "Smart Vehicle Domain Architecture",
+                        where: "Domain Entities, Service Controllers & Policy Evaluation Layer",
+                        problem: "Architected structured object-oriented models with strict encapsulation, inheritance, and interface contracts to evaluate tiered risk scores without runtime type errors."
+                    },
+                    {
+                        name: "Algorithmic Simulations & OOP Systems",
+                        where: "Graph Traversal & Collection Framework Engines",
+                        problem: "Implemented custom memory-managed queue and graph collections to benchmark transit node connectivity and routing algorithms."
+                    }
+                ]
+            },
+            python: {
+                title: "Python",
+                icon: "🐍",
+                badge: "Backend & Systems",
+                projects: [
+                    {
+                        name: "TubeInsight — YouTube-to-Knowledge Organizer",
+                        where: "Backend Orchestration (`main.py`, `ai_service.py`, `language_validator.py`)",
+                        problem: "Engineered automatic YouTube video transcript extraction, schema-guided content generation with Pydantic models, and multi-lingual script detection."
+                    },
+                    {
+                        name: "VizagBus AI — APSRTC Smart Transit System",
+                        where: "Backend Core (`backend/main.py`, `backend/db.py`, `backend/seed.py`)",
+                        problem: "Engineered real-time GPS coordinate interpolation, dynamic crowd load simulation across 57 transit buses, and live API endpoints connecting commuter and administrative dashboards."
+                    },
+                    {
+                        name: "Pickleball Tournament Management System",
+                        where: "Tournament Orchestrator & Scoring Microservice",
+                        problem: "Automated dynamic player ranking calculations, single-elimination / round-robin bracket generation, and match scheduling algorithms."
+                    },
+                    {
+                        name: "Smart Vehicle Telemetry Engine",
+                        where: "Sensor Data Ingestion & Analytics Pipeline",
+                        problem: "Processed continuous vehicle speed, acceleration, and diagnostic telemetry to identify driving anomalies and risk indicators."
+                    }
+                ]
+            },
+            fastapi: {
+                title: "FastAPI",
+                icon: "⚡",
+                badge: "Backend Framework",
+                projects: [
+                    {
+                        name: "TubeInsight — YouTube-to-Knowledge Organizer",
+                        where: "Content Ingestion & Share APIs (`/analyze`, `/folders`, `/files`, `/share`)",
+                        problem: "Constructed asynchronous streaming endpoints for transcript processing, structured folder management, and resilient error recovery for restricted YouTube videos."
+                    },
+                    {
+                        name: "VizagBus AI — APSRTC Smart Transit System",
+                        where: "API Routing Layer (`/api/routes`, `/api/buses`, `/api/chat`, `/api/complaints`)",
+                        problem: "Delivered sub-10ms asynchronous transit API responses under heavy simulated load, with strict Pydantic v2 request serialization and CORS middleware security."
+                    },
+                    {
+                        name: "Pickleball Tournament Management System",
+                        where: "REST API Endpoints for Players, Teams & Live Match Scores",
+                        problem: "Eliminated boilerplate JSON request parsing, enforced type validation, and generated instant auto-documented OpenAPI / Swagger interactive documentation."
+                    }
+                ]
+            },
+            genai: {
+                title: "GenAI & RAG Solutions",
+                icon: "🤖",
+                badge: "AI & LLMs",
+                projects: [
+                    {
+                        name: "TubeInsight — YouTube-to-Knowledge Organizer",
+                        where: "AI Knowledge Transformer (`ai_service.py` via Google Gemini SDK)",
+                        problem: "Transformed noisy, unpunctuated spoken video audio transcripts into categorized recipes, step-by-step tutorials, and study notes with strict JSON schema compliance."
+                    },
+                    {
+                        name: "VizagBus AI — APSRTC Smart Transit System",
+                        where: "AI Assistant Engine (`/api/chat`) & Complaint Auditor",
+                        problem: "Overcame hallucination in commuter transit inquiries by grounding Google Gemini and Groq Gemma with real-time SQLite transit telemetry (RAG), and automated passenger grievance priority grading."
+                    }
+                ]
+            },
+            htmlcss: {
+                title: "HTML5 & CSS3",
+                icon: "🎨",
+                badge: "Frontend Design",
+                projects: [
+                    {
+                        name: "TubeInsight Web Dashboard",
+                        where: "Knowledge Explorer & Reader Interface (`web/`)",
+                        problem: "Rendered interactive folder tree hierarchies, collapsible recipe cards, transcript sidebars, and deduplication modal dialogues."
+                    },
+                    {
+                        name: "Personal Portfolio Website",
+                        where: "Multi-page Architecture, Glassmorphism Cards, and Responsive Media Queries",
+                        problem: "Created a modern dark & gold branded visual experience with fluid mobile responsiveness and zero external heavy CSS frameworks."
+                    },
+                    {
+                        name: "VizagBus AI Transit Portal",
+                        where: "Commuter Journey Planner & Administrative Dispatch Portal (`index.html`, `admin.html`)",
+                        problem: "Designed high-contrast, accessible transit dashboards displaying real-time vehicle occupancy, stop sequences, and interactive route tables."
+                    }
+                ]
+            },
+            javascript: {
+                title: "JavaScript (ES6+) ",
+                icon: "✨",
+                badge: "Frontend Logic",
+                projects: [
+                    {
+                        name: "TubeInsight Web Dashboard",
+                        where: "Dynamic Folder Tree & Live Deduplication Manager",
+                        problem: "Implemented asynchronous client-side API requests, interactive conflict modals (keep existing, replace, or keep both), and single-click share token generation."
+                    },
+                    {
+                        name: "Personal Portfolio Website",
+                        where: "Live Search Engine, Dynamic Category Filter, and Hover Popover Engine",
+                        problem: "Enabled instant client-side interaction, animated progress bars, modal windows, and zero page reloads."
+                    },
+                    {
+                        name: "VizagBus AI Frontend",
+                        where: "Asynchronous Telemetry Polling & Dynamic DOM Updates",
+                        problem: "Synchronized live bus GPS locations and crowd percentage status bars asynchronously with the backend server."
+                    }
+                ]
+            },
+            postgresql: {
+                title: "PostgreSQL",
+                icon: "🐘",
+                badge: "Relational Database",
+                projects: [
+                    {
+                        name: "Pickleball Tournament Management System",
+                        where: "Persistent Relational Storage Schema",
+                        problem: "Prevented concurrent scoring race conditions, enforced relational foreign keys across tournaments, players, and match sets, and optimized player query lookups."
+                    }
+                ]
+            },
+            sqlite: {
+                title: "SQLite & In-Process DB",
+                icon: "💾",
+                badge: "Low-Latency DB",
+                projects: [
+                    {
+                        name: "TubeInsight — YouTube-to-Knowledge Organizer",
+                        where: "Knowledge Store & Schema Migrator (`database.py`)",
+                        problem: "Implemented automatic in-place schema upgrades, folder classification, share token indexing, and file deduplication conflict resolution."
+                    },
+                    {
+                        name: "VizagBus AI — APSRTC Smart Transit System",
+                        where: "`database/vizag_bus.db` & Dynamic Path Resolver (`backend/db.py`)",
+                        problem: "Eliminated cloud external database network latency (<5ms queries) and overcame cloud container ephemeral disk wipes by pre-seeding 70 stops and 30 routes directly into Git."
+                    }
+                ]
+            },
+            render: {
+                title: "Render & Cloud Hosting",
+                icon: "☁️",
+                badge: "Cloud & DevOps",
+                projects: [
+                    {
+                        name: "VizagBus AI — APSRTC Smart Transit System",
+                        where: "Render Web Service Container & Deployment Automation",
+                        problem: "Architected an ephemeral database preservation workflow that prevents database loss on free-tier 15-minute container sleep cycles, ensuring instant cold-starts."
+                    }
+                ]
+            },
+            git: {
+                title: "Git & GitHub",
+                icon: "🐙",
+                badge: "Version Control",
+                projects: [
+                    {
+                        name: "All Repositories (Portfolio, VizagBus AI, Pickleball, TubeInsight)",
+                        where: "Branch Management, SSH/PAT Key Authentication, and Continuous Deployment Triggers",
+                        problem: "Maintained clean commit histories, collaborated across multiple GitHub organizations/users, and automated live cloud rebuilds on commit."
+                    }
+                ]
+            },
+            nlp: {
+                title: "NLP & Classification",
+                icon: "🧠",
+                badge: "AI & Machine Learning",
+                projects: [
+                    {
+                        name: "TubeInsight — YouTube-to-Knowledge Organizer",
+                        where: "Multilingual Script & Language Validator (`language_validator.py`)",
+                        problem: "Implemented unicode script verification (validating English, Telugu, Hindi, and regional scripts) to ensure high-fidelity language preservation during AI generation."
+                    },
+                    {
+                        name: "VizagBus AI — APSRTC Smart Transit System",
+                        where: "Grievance Triage & Depot Dispatch Order Generator in `backend/main.py`",
+                        problem: "Parsed unstructured natural language passenger grievance complaints, automatically categorized issues (overcrowding, breakdown, fare anomaly), and calculated severity levels for depot action."
+                    }
+                ]
+            },
+            pytest: {
+                title: "Automated Testing & QA",
+                icon: "🧪",
+                badge: "QA & DevOps",
+                projects: [
+                    {
+                        name: "TubeInsight — YouTube-to-Knowledge Organizer",
+                        where: "Test Suite (`tests/`, `test_ai_service.py`, `test_database.py`, `test_recipe_validation.py`)",
+                        problem: "Engineered offline API contract tests, Pydantic JSON schema conformity assertions, and database migration regression suites to ensure production reliability."
+                    }
+                ]
+            }
+        };
+
+        // Popover Elements
+        const popup = document.getElementById("skillPopup");
+        const popupIcon = document.getElementById("popupIcon");
+        const popupTitle = document.getElementById("popupTitle");
+        const popupBadge = document.getElementById("popupBadge");
+        const popupProjectsList = document.getElementById("popupProjectsList");
+        const popupCloseBtn = document.getElementById("popupCloseBtn");
+
+        let hideTimeout = null;
+
+        function showSkillPopup(card) {
+            clearTimeout(hideTimeout);
+            const skillId = card.getAttribute("data-skill-id");
+            const data = skillProjectData[skillId];
+            if (!data) return;
+
+            // Fill popup data
+            popupIcon.textContent = data.icon;
+            popupTitle.textContent = data.title;
+            popupBadge.textContent = data.badge;
+
+            // Build projects line by line
+            popupProjectsList.innerHTML = data.projects.map((proj, idx) => `
+                <div class="popup-project-card">
+                    <div class="popup-project-name">
+                        <span>📌</span> ${proj.name}
+                    </div>
+                    <div class="popup-field">
+                        <span class="popup-label">Where used:</span>
+                        <span class="popup-value">${proj.where}</span>
+                    </div>
+                    <div class="popup-field">
+                        <span class="popup-label">Problem solved:</span>
+                        <span class="popup-value">${proj.problem}</span>
+                    </div>
+                </div>
+            `).join("");
+
+            // Position Popup (Desktop)
+            if (window.innerWidth > 768) {
+                const rect = card.getBoundingClientRect();
+                const popupWidth = 390;
+                const margin = 18;
+
+                // Horizontal positioning: prefer right, fallback to left
+                let left = rect.right + margin;
+                if (left + popupWidth > window.innerWidth - 15) {
+                    left = rect.left - popupWidth - margin;
+                }
+                if (left < 15) {
+                    left = Math.max(15, (window.innerWidth - popupWidth) / 2);
+                }
+
+                // Vertical positioning: align with card, clamp to window
+                let top = rect.top;
+                const popupEstimatedHeight = Math.min(460, window.innerHeight - 40);
+                if (top + popupEstimatedHeight > window.innerHeight - 15) {
+                    top = Math.max(15, window.innerHeight - popupEstimatedHeight - 15);
+                }
+
+                popup.style.left = `${left}px`;
+                popup.style.top = `${top}px`;
+            }
+
+            popup.classList.add("show");
+        }
+
+        function hideSkillPopup() {
+            hideTimeout = setTimeout(() => {
+                popup.classList.remove("show");
+            }, 120);
+        }
+
+        // Attach listeners to all skill cards
+        skillCards.forEach(card => {
+            // Hover (Desktop)
+            card.addEventListener("mouseenter", () => showSkillPopup(card));
+            card.addEventListener("mouseleave", hideSkillPopup);
+
+            // Click / Tap (Mobile & Touch)
+            card.addEventListener("click", (e) => {
+                showSkillPopup(card);
+            });
+        });
+
+        // Keep popup open when hovering over popup itself
+        popup.addEventListener("mouseenter", () => clearTimeout(hideTimeout));
+        popup.addEventListener("mouseleave", hideSkillPopup);
+
+        // Close button (Mobile)
+        popupCloseBtn.addEventListener("click", () => {
+            popup.classList.remove("show");
+        });
+
+        // Close popup when tapping outside
+        document.addEventListener("click", (e) => {
+            if (!popup.contains(e.target) && !e.target.closest(".skill-card")) {
+                popup.classList.remove("show");
+            }
+        });
+
+        // ==========================================
+        // Interactive "Skills in Action" Switcher
+        // ==========================================
+        const actionData = {
+            vizagbus: {
+                title: "VizagBus AI — APSRTC Smart Transit System",
+                tag: "FastAPI + Gemini 2.0 Flash + SQLite",
+                desc: "Engineered an intelligent public transit navigation platform connecting 70 geolocated stops, 30 bus lines, and 57 live simulated transit vehicles across Visakhapatnam.",
+                points: [
+                    "Real-time GPS bus tracking and dynamic crowd density telemetry calculations.",
+                    "RAG-powered transit assistant synthesizing user queries with live route tables via Google Gemini & Groq Gemma.",
+                    "Automated grievance categorization and severity prioritization with conductor headcount cross-auditing."
+                ],
+                link: "projects.html"
+            },
+            tubeinsight: {
+                title: "TubeInsight — YouTube-to-Knowledge Organizer",
+                tag: "FastAPI + Gemini 2.0 + Pydantic + Pytest",
+                desc: "Engineered an AI-powered content extraction platform that transforms raw YouTube video audio transcripts into categorized recipes, structured study notes, and tutorials.",
+                points: [
+                    "youtube-transcript-api integration coupled with Google Gemini for automated structured schema generation.",
+                    "Strict multi-lingual script validation (English, Telugu, Hindi) ensuring translation script purity.",
+                    "Comprehensive offline automated test suite using pytest and FastAPI TestClient verifying schema conformity."
+                ],
+                link: "projects.html"
+            },
+            pickleball: {
+                title: "Pickleball Tournament Management System",
+                tag: "FastAPI + PostgreSQL + Relational Modeling",
+                desc: "Engineered an end-to-end sports administration platform to orchestrate tournament brackets, player rankings, team registrations, and match schedules.",
+                points: [
+                    "High-performance FastAPI endpoints with structured Pydantic data schemas.",
+                    "PostgreSQL relational schema ensuring strict referential integrity across players, matches, and courts.",
+                    "Responsive dashboard for live match scoring and player statistics updates."
+                ],
+                link: "projects.html"
+            },
+            portfolio: {
+                title: "Personal Portfolio & Interactive Showcase",
+                tag: "HTML5 + Modern CSS3 + Vanilla JavaScript",
+                desc: "Designed and developed this fully custom, modular web application featuring interactive modal windows, dynamic skill filtering, and mobile-first layouts.",
+                points: [
+                    "Custom dark & gold visual design system with smooth keyframe animations and hover micro-interactions.",
+                    "Dynamic client-side filtering and real-time search across skills and projects.",
+                    "Strictly responsive across desktops, tablets, and smartphones without relying on heavy external UI frameworks."
+                ],
+                link: "projects.html"
+            },
+            render: {
+                title: "Cloud Deployment Architecture on Render",
+                tag: "Cloud Containers + Ephemeral DB Strategy",
+                desc: "Overcame cloud container ephemeral disk wipeouts on free-tier deployments by implementing an intelligent in-process SQLite pre-seeding pipeline.",
+                points: [
+                    "Zero cold-start delay by baking 100% of transit stop and schedule records directly into deployment commits.",
+                    "Multi-path database resolver dynamically choosing between local monorepo and container root paths.",
+                    "Production Uvicorn server configuration with robust CORS security headers."
+                ],
+                link: "projects.html"
+            }
+        };
+
+        const actionChips = document.querySelectorAll(".action-chip");
+        const actionTitle = document.getElementById("actionTitle");
+        const actionTag = document.getElementById("actionTag");
+        const actionDesc = document.getElementById("actionDesc");
+        const actionPoints = document.getElementById("actionPoints");
+        const actionBtn = document.getElementById("actionBtn");
+
+        actionChips.forEach(chip => {
+            chip.addEventListener("click", () => {
+                actionChips.forEach(c => c.classList.remove("active"));
+                chip.classList.add("active");
+
+                const key = chip.getAttribute("data-action");
+                const item = actionData[key];
+                if (!item) return;
+
+                actionTitle.textContent = item.title;
+                actionTag.textContent = item.tag;
+                actionDesc.textContent = item.desc;
+                actionPoints.innerHTML = item.points.map(pt => `<li><span>✔</span> ${pt}</li>`).join("");
+                actionBtn.href = item.link;
+
+                const detailCard = document.getElementById("actionDetailCard");
+                detailCard.style.animation = "none";
+                void detailCard.offsetWidth; // trigger reflow
+                detailCard.style.animation = "fadeIn 0.35s ease";
+            });
+        });
+    </script>
+</body>
+</html>

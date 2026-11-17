@@ -23,11 +23,15 @@ A modern, responsive personal portfolio website built using **HTML5**, **CSS3**,
    - Built with **FastAPI**, **SQLite**, and **RAG (Retrieval-Augmented Generation)** using **Google Gemini** & **Groq Gemma**.
    - Features real-time GPS tracking across 70 stops, crowd density simulation, and automated grievance categorization.
 
-2. **Pickleball Management System**
+2. **TubeInsight — YouTube-to-Knowledge Organizer**
+   - AI-powered content extraction platform that transforms raw YouTube video audio transcripts into categorized recipes, structured study notes, and tutorials.
+   - Built using **FastAPI**, **Python**, **Google Gemini AI**, **Pydantic**, **youtube-transcript-api**, and **pytest**.
+
+3. **Pickleball Management System**
    - High-performance web application to manage tournaments, teams, and match statistics.
    - Built using **FastAPI**, **Python**, and **PostgreSQL**.
 
-3. **Personal Portfolio**
+4. **Personal Portfolio**
    - Clean, modular personal showcase site built with modern responsive web standards.
 
 ---
@@ -35,10 +39,10 @@ A modern, responsive personal portfolio website built using **HTML5**, **CSS3**,
 ## 🛠️ Tech Stack & Skills
 
 - **Frontend**: HTML5, CSS3 (Flexbox, CSS Grid, Media Queries), JavaScript (ES6+)
-- **Backend**: Python, FastAPI, Uvicorn, RESTful APIs, Pydantic
-- **AI & LLM Integration**: Generative AI, RAG, Prompt Engineering, Google Gemini API, Groq Gemma
+- **Backend**: Python, Java, FastAPI, Uvicorn, RESTful APIs, Pydantic
+- **AI & LLM Integration**: Generative AI, RAG, Prompt Engineering, Google Gemini API, Groq Gemma, Transcript Extraction
 - **Databases & Cloud**: PostgreSQL, SQLite, AWS, Render Deployment
-- **Tools**: Git, GitHub, VS Code
+- **Testing & Tools**: pytest, FastAPI TestClient, Git, GitHub, VS Code
 
 ---
 
@@ -47,7 +51,8 @@ A modern, responsive personal portfolio website built using **HTML5**, **CSS3**,
 ```text
 portfolio/
 ├── index.html         # Homepage with hero section & CV download
-├── about.html         # About me & interactive skills showcase
+├── about.html         # About me professional background
+├── skills.html        # Interactive skills matrix with animations & filtering
 ├── projects.html      # Projects showcase with interactive modal popups
 ├── contact.html       # Contact form & communication links
 ├── nikhil_cv.pdf      # Downloadable resume / CV
@@ -59,7 +64,8 @@ portfolio/
     ├── nikhil1.jpg    # About page profile image
     ├── portfolio.jpg  # Portfolio project thumbnail
     ├── pickleball.jpg # Pickleball project thumbnail
-    └── vizag_bus.jpg  # VizagBus AI project thumbnail
+    ├── vizag_bus.jpg  # VizagBus AI project thumbnail
+    └── tubeinsight.jpg# TubeInsight project thumbnail
 ```
 
 ---

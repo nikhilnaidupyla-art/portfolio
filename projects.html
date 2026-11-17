@@ -8,10 +8,11 @@
     </head>
     <body>
         <header>
-            <div class="logo"><image src="Image/logo.jpeg" alt="My logo"></image></div>
+            <div class="logo"><img src="Image/logo.jpeg" alt="My logo"></div>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
                 <a href="projects.html" class="active">Projects</a>
                 <a href="contact.html">Contact</a>
             </nav>
@@ -41,6 +42,13 @@
                     <h3>VizagBus AI</h3>
                     <p>AI-driven smart transit platform for APSRTC featuring real-time bus tracking, crowd simulation, and intelligent route navigation.</p>
                     <button class="view-btn" data-project="vizagbus">View Details</button>
+                </div>
+
+                <div class="project-card">
+                    <img src="Image/tubeinsight.jpg" alt="TubeInsight — YouTube-to-Knowledge Organizer">
+                    <h3>TubeInsight</h3>
+                    <p>AI-powered YouTube knowledge extraction platform converting video transcripts into structured study notes, tutorials, and recipes.</p>
+                    <button class="view-btn" data-project="tubeinsight">View Details</button>
                 </div>
                 <!-- Modal (Hidden by default) -->
                 <div id="projectModal" class="modal">
@@ -76,6 +84,11 @@
       title: "VizagBus AI — APSRTC Smart Transit System",
       description:
         "An intelligent public transit navigation and fleet telemetry platform designed for Visakhapatnam commuters and APSRTC operations. Built with a high-performance FastAPI backend and SQLite database, the system features real-time GPS tracking across 70 geolocated stops and 30 master transit lines, dynamic crowd density simulation, grievance ticketing with automated NLP categorization, and an interactive AI Transit Assistant powered by Google Gemini/Groq Gemma with RAG (Retrieval-Augmented Generation) telemetry support."
+    },
+    tubeinsight: {
+      title: "TubeInsight — YouTube-to-Knowledge Organizer",
+      description:
+        "An AI-driven content extraction and structured knowledge organizer that transforms unstructured YouTube video audio transcripts into categorized notes, tutorials, and recipes. Built with Python 3.11+ and FastAPI, the system integrates the google-genai SDK (Gemini) with strict Pydantic JSON schema validation, youtube-transcript-api for audio transcript parsing, multi-lingual script validation (English, Telugu, Hindi), intelligent deduplication conflict resolution (keep existing, replace, or keep both), and a SQLite database with public share-token support."
     }
   };
 
